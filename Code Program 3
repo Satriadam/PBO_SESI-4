@@ -1,0 +1,36 @@
+public class Shape {
+    public double getArea() {
+        return 0;
+    }
+}
+
+publicclass Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    public double getArea(double diameter) {
+        return Math.PI * (diameter / 2) * (diameter / 2);
+    }
+}
+
+public class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double getArea() {
+        return width * height;
+    }
+}
